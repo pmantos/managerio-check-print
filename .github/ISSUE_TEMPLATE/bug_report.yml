@@ -1,0 +1,24 @@
+name: Bug report
+description: Something broke or prints wrong
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Include the exact command you ran and a short excerpt of your input text (redact sensitive info).
+    validations: { required: true }
+  - type: textarea
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    attributes:
+      label: Screenshots / attachments
+      description: Drag images of Manager.io “Printable Checks”, the Supplier record, and the generated _print.txt.
+  - type: input
+    attributes:
+      label: OS / Python
+      placeholder: "Windows 10, Python 3.12.6"
+  - type: input
+    attributes:
+      label: Script version
+      placeholder: "print_voucher_checks_text.py --version"
