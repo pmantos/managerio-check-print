@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+# near the top
+__version__ = "1.0.0"
+
+
 """
 print_voucher_checks_text.py
 
@@ -661,6 +665,7 @@ def main():
     ap.add_argument("--encoding", default="cp437", help="RAW printer encoding/code page (default: %(default)s)")
     ap.add_argument("--charset", type=int, default=437, help="ESC/P character table: 437, 850, 860, 863, 865 (default: %(default)s)")
     ap.add_argument("--cal", action="store_true", help="Print calibration grid (no input/output) and exit.")
+    ap.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     args = ap.parse_args()
 
     charset_map = {437: 0, 850: 2, 860: 3, 863: 4, 865: 5}
