@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Editors
+.vscode/
+.idea/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# This project’s generated files
+*_print.txt
+*_debug.txt
+*_printed_*.txt
