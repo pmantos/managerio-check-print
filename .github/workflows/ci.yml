@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push: { branches: [ main ] }
+  pull_request: { branches: [ main ] }
+
+jobs:
+  windows-smoke:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Install deps
+        run: pip install -r requirements.txt flake8
+      - name: Lint
+        run: flake8 print_voucher_checks_text.py --max-line-length=100
+      - name: Help output (smoke test)
+        run: python print_voucher_checks_text.py --help
